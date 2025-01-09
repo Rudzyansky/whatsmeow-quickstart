@@ -8,6 +8,6 @@ RUN rm -rf build
 RUN go clean -modcache
 
 
-FROM alpine:latest
+FROM golang:1.19.5-buster
 COPY --from=builder /main /main
 ENTRYPOINT ["/main"]
