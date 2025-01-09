@@ -5,6 +5,6 @@ RUN go mod download
 RUN GOOS=linux go build -o ./main
 
 
-FROM scratch
+FROM alpine:latest
 COPY --from=builder /build/main /main
 ENTRYPOINT ["/main"]
