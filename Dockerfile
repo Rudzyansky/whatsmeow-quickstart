@@ -7,4 +7,3 @@ RUN GOOS=linux go build -o ./main
 
 FROM alpine:latest
 COPY --from=builder /build/main /main
-ENTRYPOINT ["/main"]
